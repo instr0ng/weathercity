@@ -10,7 +10,7 @@ import (
 )
 
 func Currentpogoda(city string) string {
-	w, err := owm.NewCurrent("C", "ru", "eb02daa1e670095dd12a65ebd52a2fd1")
+	w, err := owm.NewCurrent("C", "ru", "OpenWeatherMap_Token")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -23,7 +23,7 @@ func Currentpogoda(city string) string {
 }
 
 func telegrambot() {
-	bot, err := tgbotapi.NewBotAPI("5504867100:AAG4hdvRYmGGCXjHl-J1CZmuxI23FfCR0Ws")
+	bot, err := tgbotapi.NewBotAPI("TelegramBot_Token")
 	if err != nil {
 		log.Panic(err)
 	}
